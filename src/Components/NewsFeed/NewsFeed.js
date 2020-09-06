@@ -13,6 +13,7 @@ const NewsFeed = (props) => {
         <p>Privacy : <FontAwesomeIcon icon={faCog}/> Custom</p>
         <p>{body}</p>
         <Button variant="contained" color="primary"><Link to={`/posts/${id}`}><span className='see-more'>See More</span></Link></Button>
+        <small>click right in the middle of the button please</small>
         
         </div>
         
