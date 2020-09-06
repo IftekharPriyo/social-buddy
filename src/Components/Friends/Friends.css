@@ -1,3 +1,9 @@
 .friends-list{
     text-align:left;
+    color: green;
+}
+
+#friend-name{
+    color: black;
+    margin-left: 20px;
 }

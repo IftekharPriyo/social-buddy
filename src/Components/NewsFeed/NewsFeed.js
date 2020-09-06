@@ -11,7 +11,7 @@ const NewsFeed = (props) => {
         <small>privacy : friends</small>
         <br/>
         <p>{body}</p>
-        <Button variant="contained" color="primary">See More</Button>
+        <Button variant="contained" color="primary"><Link to={`/posts/${id}`}>See More</Link></Button>
         
         </div>
         
@@ -19,3 +19,4 @@ const NewsFeed = (props) => {
 };
 
 export default NewsFeed;
+

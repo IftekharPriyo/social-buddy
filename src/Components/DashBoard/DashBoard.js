@@ -41,11 +41,11 @@ const classes = useStyles();
       <div className="dashboard-container">
       
       <div className={classes.root}>
-        <Grid container spacing={3}>
-          <Grid item xs={6} sm={3}>
+        <Grid container spacing={5}>
+          <Grid item xs={8} sm={3}>
             <Paper className={`profile ${classes.paper}`}> <OwnProfile></OwnProfile> </Paper>
           </Grid>
-          <Grid item xs={12} sm={6}>
+          <Grid item xs={10} sm={6}>
             <Paper className={classes.paper}>
             <h1>Posts</h1>
             
