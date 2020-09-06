@@ -20,26 +20,30 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 const DashBoard = () => {
-    const [newsfeed,setNewsfeed] = useState([]);
-useEffect(()=>{
+  const [newsfeed, setNewsfeed] = useState([]);
+  
+  // initializing posts for the newsfeed
+  useEffect(() => {
     fetch('https://jsonplaceholder.typicode.com/posts')
-    .then(res=>res.json())
-    .then(data=>setNewsfeed(data))
-},[])
+      .then(res => res.json())
+      .then(data => setNewsfeed(data))
+  }, [])
 
-const [friends,setFriends] = useState([]);
-useEffect(()=>{
+  const [friends, setFriends] = useState([]);
+  
+  // initializing online friends
+  useEffect(() => {
     fetch('https://jsonplaceholder.typicode.com/users')
-    .then(res=>res.json())
-    .then(data=>setFriends(data))
-},[])
+      .then(res => res.json())
+      .then(data => setFriends(data))
+  }, [])
 
 
-const classes = useStyles();
+  const classes = useStyles();
 
-    return (
-      <div className="dashboard-container">
-      
+  return (
+    <div className="dashboard-container">
+
       <div className={classes.root}>
         <Grid container spacing={5}>
           <Grid item xs={8} sm={3}>
@@ -47,28 +51,27 @@ const classes = useStyles();
           </Grid>
           <Grid item xs={10} sm={6}>
             <Paper className={classes.paper}>
-            <h1>Posts</h1>
-            
-            {
-                newsfeed.map(feed=><NewsFeed key={feed.id} feed={feed}></NewsFeed>)
-            }
+              <h1>NewsFeed</h1>
+              {
+                newsfeed.map(feed => <NewsFeed key={feed.id} feed={feed}></NewsFeed>)
+              }
             </Paper>
           </Grid>
           <Grid item xs={6} sm={3}>
             <Paper className={classes.paper}>
-            <h1>Active Friends</h1>
-            {
-              friends.map(friends=><Friends key={friends.id} friends={friends}></Friends>)
-            }
-            
+              <h1>Active Friends</h1>
+              {
+                friends.map(friends => <Friends key={friends.id} friends={friends}></Friends>)
+              }
+
             </Paper>
           </Grid>
         </Grid>
       </div>
 
 
-      </div>
-    );
+    </div>
+  );
 };
 
 export default DashBoard;

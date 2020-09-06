@@ -10,6 +10,7 @@ import {
 } from "react-router-dom";
 import DashBoard from './Components/DashBoard/DashBoard';
 import Post from './Components/Post/Post';
+import NotFound from './Components/NotFound/NotFound';
 
 function App() {
   return (
@@ -26,9 +27,9 @@ function App() {
         <Route exact path= '/'>
           <DashBoard></DashBoard>
         </Route>
-        {/* <Route path ='*'>
+        <Route path ='*'>
           <NotFound></NotFound>
-        </Route> */}
+        </Route>
       </Switch>
     </Router>
     </div>

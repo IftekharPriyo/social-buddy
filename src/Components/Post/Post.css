@@ -8,4 +8,9 @@
 .comment-section{
     margin-bottom:50px;
     padding-bottom:50px !important;
+    margin-top: 50px;
+}
+
+#post{
+    font-size: 40px;
 }
