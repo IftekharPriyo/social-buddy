@@ -13,7 +13,7 @@ Technology Used
 Features
 ------
 - Render newsfeed UI from fakedata
--Render corresponding comments from certain fake data when someone enters the post
+- Render corresponding comments from certain fake data when someone enters the post
 
 Run Locally
 ------
